@@ -1,3 +1,3 @@
 # Global Engineering Group
 
-&copy; 2022 Mixen: Boosting Brands
+&copy; 2023 Mixen: Boosting Brands
