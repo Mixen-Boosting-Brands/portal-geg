@@ -1,5 +1,5 @@
 {
-  "name": "global-engineering-group",
+  "name": "portal-geg",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/luiscarlospando/global-engineering-group.git"
+    "url": "git+https://github.com/Mixen-Boosting-Brands/portal-geg.git"
   },
   "author": "Luis Carlos Pando <hey@luiscarlospando.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/luiscarlospando/global-engineering-group/issues"
+    "url": "https://github.com/Mixen-Boosting-Brands/portal-gegissues"
   },
-  "homepage": "https://gitlab.com/luiscarlospando/global-engineering-group#readme",
+  "homepage": "https://github.com/Mixen-Boosting-Brands/portal-geg#readme",
   "devDependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.17.10",
