@@ -181,13 +181,6 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/app.bundle.js?ver=<?php echo rand(111,999)?>"></script>
 
-    <!-- Botón de descarga -->
-    <script type="text/javascript">
-        document.getElementById("btn-descargar").onclick = function () {
-            location.href = "https://grupogeg.com/gracias-por-descargar-nuestro-contenido/";
-        };
-    </script>
-
 	<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P4JDSD90KY"></script>
     <script>
