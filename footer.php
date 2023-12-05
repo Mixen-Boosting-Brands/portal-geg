@@ -166,7 +166,7 @@
             </div>
             <div class="row">
                 <div class="col text-end mt-4">
-                    <?php if ( $currentlang == "en-US" ): ?><a href="<?php echo get_page_link('698') ?>"><?php esc_html_e( 'Aviso de Privacidad', 'geg' ); ?></a><?php else: ?><a href="<?php echo get_page_link('3') ?>"><?php esc_html_e( 'Aviso de Privacidad', 'geg' ); ?></a><?php endif; ?> | &copy;  <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>. <?php esc_html_e( 'Todos los derechos reservados.', 'geg' ); ?><br><?php esc_html_e( 'Hecho con', 'geg' ); ?> <i class="fa-solid fa-heart"></i> <?php esc_html_e( 'por', 'geg' ); ?> <a href="https://mixen.mx" target="_blank">Mixen</a>
+                    <?php if ( $currentlang == "en-US" ): ?><a href="https://grupogeg.com/en/privacy-policy/"><?php esc_html_e( 'Aviso de Privacidad', 'geg' ); ?></a><?php else: ?><a href="https://grupogeg.com/aviso-de-privacidad/"><?php esc_html_e( 'Aviso de Privacidad', 'geg' ); ?></a><?php endif; ?> | &copy;  <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>. <?php esc_html_e( 'Todos los derechos reservados.', 'geg' ); ?><br><?php esc_html_e( 'Hecho con', 'geg' ); ?> <i class="fa-solid fa-heart"></i> <?php esc_html_e( 'por', 'geg' ); ?> <a href="https://mixen.mx" target="_blank">Mixen</a>
                 </div>
             </div>
         </div>
