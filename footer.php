@@ -2,7 +2,6 @@
     $currentlang = get_bloginfo('language');
     if( !is_home() ):
 ?>
-    <?php if ( 'vcards' !== get_post_type() ): // Ocultar lo siguiente si se está renderizando una vCard ?>
     <footer>
         <div class="container">
             <div class="row">
@@ -171,7 +170,6 @@
             </div>
         </div>
     </footer>
-    <?php endif; ?> 
 <?php endif; ?>
 
 	<?php wp_footer(); ?>
