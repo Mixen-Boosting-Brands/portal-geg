@@ -5,6 +5,10 @@
         <?php if( have_rows('header') ): while( have_rows('header') ): the_row(); ?>
             <h1 data-aos="fade-right" data-aos-once="true" <?php if( get_sub_field('color_del_titulo') ): ?>style="color: #<?php the_sub_field('color_del_titulo'); ?>;"<?php endif; ?>><?php the_title(); ?></h1>
         <?php endwhile; endif; ?>
+    <?php elseif ( 'procesos' == get_post_type() ): ?>
+        <?php if( have_rows('header') ): while( have_rows('header') ): the_row(); ?>
+            <h1 data-aos="fade-right" data-aos-once="true" <?php if( get_sub_field('color_del_titulo') ): ?>style="color: #<?php the_sub_field('color_del_titulo'); ?>;"<?php endif; ?>><?php esc_html_e( 'Procesos de construcción', 'geg' ); ?></h1>
+        <?php endwhile; endif; ?>
     <?php endif; ?>
         <?php if( have_rows('header') ): while( have_rows('header') ): the_row(); ?>
             <p data-aos="fade-right" data-aos-delay="300" data-aos-once="true"><?php the_sub_field('texto'); ?></p>
