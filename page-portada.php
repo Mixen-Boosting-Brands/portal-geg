@@ -30,7 +30,7 @@
 						<a href="<?php the_permalink(); ?>">
 							<?php the_post_thumbnail('category', array('class' => 'img-fluid')); ?>
 							<div class="card-body">
-								<h5 class="card-title"><?php the_title(); ?></h5>
+								<h5 class="card-title mb-0"><?php the_title(); ?></h5>
 							</div>
 						</a>
 					</div>
