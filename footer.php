@@ -32,61 +32,31 @@
                         <ul class="list-unstyled">
                         <?php if ( $currentlang == "en-US" ): ?>
                             <li>
-                                <a href="<?php echo get_page_link('685'); ?>"><?php echo get_the_title('685'); ?></a>
+                                <a href="<?php echo get_page_link('21'); ?>"><?php echo get_the_title('21'); ?></a>
                             </li>
                             <li>
-                                <a href="<?php echo get_page_link('690'); ?>"><?php echo get_the_title('690'); ?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo get_page_link('695'); ?>"><?php echo get_the_title('695'); ?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo get_page_link('701'); ?>"><?php echo get_the_title('701'); ?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo get_page_link('710'); ?>"><?php echo get_the_title('710'); ?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo get_page_link('704'); ?>"><?php echo get_the_title('704'); ?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo get_page_link('707'); ?>"><?php echo get_the_title('707'); ?></a>
+                                <a href="<?php echo get_page_link('25'); ?>"><?php echo get_the_title('25'); ?></a>
                             </li>
                         <?php else: ?>
                             <li>
                                 <a href="<?php echo get_page_link('2'); ?>"><?php echo get_the_title('2'); ?></a>
                             </li>
                             <li>
-                                <a href="<?php echo get_page_link('20'); ?>"><?php echo get_the_title('20'); ?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo get_page_link('12'); ?>"><?php echo get_the_title('12'); ?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo get_page_link('16'); ?>"><?php echo get_the_title('16'); ?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo get_page_link('7'); ?>"><?php echo get_the_title('7'); ?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo get_page_link('22'); ?>"><?php echo get_the_title('22'); ?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo get_page_link('18'); ?>"><?php echo get_the_title('18'); ?></a>
+                                <a href="<?php echo get_page_link('23'); ?>"><?php echo get_the_title('23'); ?></a>
                             </li>
                         <?php endif; ?>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-lg-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="800" data-aos-once="true">
-                    <h3 class="mt-3 mt-lg-0"><?php esc_html_e( 'Contáctanos', 'geg' ); ?></h3>
+                    <h3 class="mt-3 mt-lg-0"><?php esc_html_e( 'Página web', 'geg' ); ?></h3>
                     <nav>
                         <ul class="list-unstyled">
                             <li>
                             <?php if ( $currentlang == "en-US" ): ?>
-                                <a href="<?php echo get_page_link('713'); ?>" class="btn btn-primary"><?php echo get_the_title('713'); ?></a>
+                                <a href="https://grupogeg.com/en/" class="btn btn-primary"><?php esc_html_e( 'Ingresar', 'geg' ); ?></a>
                             <?php else: ?>
-                                <a href="<?php echo get_page_link('14'); ?>" class="btn btn-primary"><?php echo get_the_title('14'); ?></a>
+                                <a href="https://grupogeg.com/" class="btn btn-primary"><?php esc_html_e( 'Ingresar', 'geg' ); ?></a>
                             <?php endif; ?>
                             </li>
                         </ul>

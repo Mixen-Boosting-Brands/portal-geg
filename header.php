@@ -24,14 +24,8 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10903851958"></script>
     <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-10903851958'); </script>
-
-<?php if( is_page('4786') ): ?>
-    <!-- Event snippet for Website traffic conversion page -->
-    <script> gtag('event', 'conversion', {'send_to': 'AW-10903851958/wlQtCIeC85EYELanrs8o'}); </script>
-<?php endif; ?>
 </head>
 <body>
-<?php if ( 'vcards' !== get_post_type() ): // Ocultar lo siguiente si se está renderizando una vCard ?>
     <ul class="podcast list-unstyled d-none d-lg-block">
         <li>
             <a href="https://open.spotify.com/show/3ywoYPFOUJYmZE8OAjHDhs" target="_blank">
@@ -93,55 +87,25 @@
                 <ul class="list-unstyled">
                 <?php if ( $currentlang == "en-US" ): ?>
                     <li>
-                        <a href="<?php echo get_page_link('685'); ?>"><?php echo get_the_title('685'); ?></a>
+                        <a href="<?php echo get_page_link('21'); ?>"><?php echo get_the_title('21'); ?></a>
                     </li>
                     <li>
-                        <a href="<?php echo get_page_link('690'); ?>"><?php echo get_the_title('690'); ?></a>
-                    </li>
-                    <li>
-                        <a href="<?php echo get_page_link('695'); ?>"><?php echo get_the_title('695'); ?></a>
-                    </li>
-                    <li>
-                        <a href="<?php echo get_page_link('701'); ?>"><?php echo get_the_title('701'); ?></a>
-                    </li>
-                    <li>
-                        <a href="<?php echo get_page_link('710'); ?>"><?php echo get_the_title('710'); ?></a>
-                    </li>
-                    <li>
-                        <a href="<?php echo get_page_link('704'); ?>"><?php echo get_the_title('704'); ?></a>
-                    </li>
-                    <li>
-                        <a href="<?php echo get_page_link('707'); ?>"><?php echo get_the_title('707'); ?></a>
+                        <a href="<?php echo get_page_link('25'); ?>"><?php echo get_the_title('25'); ?></a>
                     </li>
                 <?php else: ?>
                     <li>
                         <a href="<?php echo get_page_link('2'); ?>"><?php echo get_the_title('2'); ?></a>
                     </li>
                     <li>
-                        <a href="<?php echo get_page_link('20'); ?>"><?php echo get_the_title('20'); ?></a>
-                    </li>
-                    <li>
-                        <a href="<?php echo get_page_link('12'); ?>"><?php echo get_the_title('12'); ?></a>
-                    </li>
-                    <li>
-                        <a href="<?php echo get_page_link('16'); ?>"><?php echo get_the_title('16'); ?></a>
-                    </li>
-                    <li>
-                        <a href="<?php echo get_page_link('7'); ?>"><?php echo get_the_title('7'); ?></a>
-                    </li>
-                    <li>
-                        <a href="<?php echo get_page_link('22'); ?>"><?php echo get_the_title('22'); ?></a>
-                    </li>
-                    <li>
-                        <a href="<?php echo get_page_link('18'); ?>"><?php echo get_the_title('18'); ?></a>
+                        <a href="<?php echo get_page_link('23'); ?>"><?php echo get_the_title('23'); ?></a>
                     </li>
                 <?php endif; ?>
                 </ul>
             </nav>
         <?php if ( $currentlang == "en-US" ): ?>
-            <a href="<?php echo get_page_link('713'); ?>" class="btn btn-primary" id="btn-contacto"><?php echo get_the_title('713'); ?></a>
+            <a href="https://grupogeg.com/en/contact-us/" class="btn btn-primary" id="btn-contacto"><?php esc_html_e( 'Contáctanos', 'geg' ); ?></a>
         <?php else: ?>
-            <a href="<?php echo get_page_link('14'); ?>" class="btn btn-primary" id="btn-contacto"><?php echo get_the_title('14'); ?></a>
+            <a href="https://grupogeg.com/contactanos/" class="btn btn-primary" id="btn-contacto"><?php esc_html_e( 'Contáctanos', 'geg' ); ?></a>
         <?php endif; ?>
     <?php if( have_rows('datos_de_contacto', 'option') ): while( have_rows('datos_de_contacto', 'option') ): the_row(); ?>
         <?php if( have_rows('redes_sociales') ): while( have_rows('redes_sociales') ): the_row(); ?>
@@ -265,37 +229,12 @@
                         <?php if ( $currentlang == "en-US" ): ?>
                             <div class="row">
                                 <div class="col">
-                                    <ul class="navbar-top list-inline mb-2 mb-lg-0">
-                                        <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('710'); ?>"><?php echo get_the_title('710'); ?></a>
-                                        </li>
-                                        <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('704'); ?>"><?php echo get_the_title('704'); ?></a>
-                                        </li>
-                                        <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('707'); ?>"><?php echo get_the_title('707'); ?></a>
-                                        </li>
-                                        <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('713'); ?>"><?php echo get_the_title('713'); ?></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <hr class="d-none d-lg-block">
-                            <div class="row">
-                                <div class="col">
                                     <ul class="navbar-bottom list-inline mb-2 mb-lg-0">
                                         <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('685'); ?>"><?php echo get_the_title('685'); ?></a>
+                                            <a class="nav-link" href="<?php echo get_page_link('21'); ?>"><?php echo get_the_title('21'); ?></a>
                                         </li>
                                         <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('690'); ?>"><?php echo get_the_title('690'); ?></a>
-                                        </li>
-                                        <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('695'); ?>"><?php echo get_the_title('695'); ?></a>
-                                        </li>
-                                        <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('701'); ?>"><?php echo get_the_title('701'); ?></a>
+                                            <a class="nav-link" href="<?php echo get_page_link('25'); ?>"><?php echo get_the_title('25'); ?></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -303,37 +242,12 @@
                         <?php else: ?>
                             <div class="row">
                                 <div class="col">
-                                    <ul class="navbar-top list-inline mb-2 mb-lg-0">
-                                        <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('7'); ?>"><?php echo get_the_title('7'); ?></a>
-                                        </li>
-                                        <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('22'); ?>"><?php echo get_the_title('22'); ?></a>
-                                        </li>
-                                        <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('18'); ?>"><?php echo get_the_title('18'); ?></a>
-                                        </li>
-                                        <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('14'); ?>"><?php echo get_the_title('14'); ?></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <hr class="d-none d-lg-block">
-                            <div class="row">
-                                <div class="col">
                                     <ul class="navbar-bottom list-inline mb-2 mb-lg-0">
                                         <li class="nav-item list-inline-item">
                                             <a class="nav-link" href="<?php echo get_page_link('2'); ?>"><?php echo get_the_title('2'); ?></a>
                                         </li>
                                         <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('20'); ?>"><?php echo get_the_title('20'); ?></a>
-                                        </li>
-                                        <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('12'); ?>"><?php echo get_the_title('12'); ?></a>
-                                        </li>
-                                        <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('16'); ?>"><?php echo get_the_title('16'); ?></a>
+                                            <a class="nav-link" href="<?php echo get_page_link('23'); ?>"><?php echo get_the_title('23'); ?></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -411,4 +325,3 @@
             </div>
         </nav>
     </header>
-<?php endif; ?>
