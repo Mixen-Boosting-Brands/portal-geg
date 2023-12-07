@@ -184,6 +184,11 @@
 
                 .navbar-bottom {
                     justify-content: end;
+
+                    .nav-item:not(:last-child) {
+                        margin-right: 3rem;
+                    }
+
                     .nav-link {
                         font-weight: 700;
                     }
