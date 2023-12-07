@@ -28,7 +28,7 @@
 				<div class="col-lg-3">
 					<div class="card mb-3">
 						<a href="<?php the_permalink(); ?>">
-							<?php the_post_thumbnail('category'); ?>
+							<?php the_post_thumbnail('category', array('class' => 'img-fluid')); ?>
 							<div class="card-body">
 								<h5 class="card-title"><?php the_title(); ?></h5>
 							</div>
