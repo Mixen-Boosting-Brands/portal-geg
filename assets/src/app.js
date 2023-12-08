@@ -110,7 +110,7 @@ accordionItems.forEach((el)=>{
 });
 
 // Instancias de Swiper
-const sliderVacantes = new Swiper('.slider-vacantes', {
+const sliderProcesos = new Swiper('.slider-procesos', {
     // Optional parameters
     slidesPerView: 1,
     spaceBetween: 30,
