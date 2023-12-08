@@ -18,7 +18,6 @@
 					<div class="mt-4">
 						<?php comments_template(); ?>
 					</div>
-					<?php edit_post_link(); // Always handy to have Edit Post Links available. ?>
 				<?php endwhile; ?>
 				<?php else : ?>
 					<p><?php esc_html_e( 'Lo sentimos, no hay nada que mostrar aquí.', 'geg' ); ?></p>
@@ -72,6 +71,7 @@
 						<div class="swiper-button-prev"></div>
 						<div class="swiper-button-next"></div>
 					</div>
+					<?php edit_post_link(); // Always handy to have Edit Post Links available. ?>
 				</div>
 			</div>
 		</div>
