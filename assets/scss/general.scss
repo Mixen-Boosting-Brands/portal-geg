@@ -276,19 +276,19 @@ ul {
     border: none;
     border-radius: 0;
 
+    a {
+        color: $font-color-primary;
+
+        &:hover,
+        &:focus {
+            color: $font-color-verde;
+        }
+    }
+
     .card-body {
         width: 100%;
         float: left;
         // padding: 50px 30px;
-        
-        a {
-            color: $font-color-primary;
-
-            &:hover,
-            &:focus {
-                color: $font-color-verde;
-            }
-        }
     }
 
     .text-muted {
