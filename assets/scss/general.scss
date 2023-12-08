@@ -279,7 +279,16 @@ ul {
     .card-body {
         width: 100%;
         float: left;
-        padding: 50px 30px;
+        // padding: 50px 30px;
+        
+        a {
+            color: $font-color-primary;
+
+            &:hover,
+            &:focus {
+                color: $font-color-verde;
+            }
+        }
     }
 
     .text-muted {
