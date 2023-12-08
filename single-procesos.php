@@ -4,7 +4,7 @@
     <?php include get_template_directory() . '/includes/header-interna.php'; ?>
     <!-- /Incluir header interna -->
 
-	<section class="pb-30">
+	<section class="pt-60 pb-30">
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
