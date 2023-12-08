@@ -38,10 +38,13 @@
 						<!-- Additional required wrapper -->
 						<div class="swiper-wrapper">
 							<!-- Slides -->
-						<?php 
+						<?php
+							$current_post_id = get_the_ID(); // Get the current post ID
+
 							$args = array(
 								'post_type' => 'procesos',
-								'posts_per_page' => -1
+								'posts_per_page' => -1,
+								'post__not_in'   => array($current_post_id), // Exclude the current post
 							);
 
 							$the_query = new WP_Query( $args );
