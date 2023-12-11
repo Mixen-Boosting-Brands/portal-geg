@@ -33,7 +33,7 @@
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "bootstrap": "^5.2.0-beta1",
-    "jquery": "^3.6.0",
+    "jquery": "^3.7.1",
     "jquery-parallax.js": "^1.5.0",
     "swiper": "^8.2.4"
   }
