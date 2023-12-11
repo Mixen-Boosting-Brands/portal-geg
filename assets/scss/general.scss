@@ -892,6 +892,7 @@ header#navbar {
 
     .swiper-button-prev,
     .swiper-button-next {
+        --swiper-navigation-sides-offset: 10px;
         color: $font-color-secondary;
     }
 
@@ -910,6 +911,13 @@ header#navbar {
         .carousel-control-next {
             right: -45px;
         }
+    }
+}
+
+.slider-procesos {
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $font-color-secondary;
     }
 }
 
