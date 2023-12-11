@@ -30,7 +30,7 @@
 	<section class="pt-30 pb-60">
 		<div class="container">
 			<div class="row">
-				<div class="col">
+				<div class="col col-lg-10 offset-lg-1">
 					<h2>Más procesos</h2>
 					<!-- Slider main container -->
 					<div class="swiper slider-procesos">
