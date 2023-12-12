@@ -31,7 +31,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<h2>Más procesos</h2>
+					<h2><?php esc_html_e( 'Más procesos', 'geg' ); ?></h2>
 					<!-- Slider main container -->
 					<div class="swiper slider-procesos">
 						<!-- Additional required wrapper -->
