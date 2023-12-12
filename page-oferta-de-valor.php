@@ -18,7 +18,7 @@
 			<div class="row">
 			<?php 
 				$args = array(
-					'post_type' => 'procesos',
+					'post_type' => 'equipo',
 					'posts_per_page' => -1
 				);
 
