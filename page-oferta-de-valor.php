@@ -12,7 +12,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<h1 class="titulo-verde mb-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" data-aos-once="true"><?php the_title(); ?></h1>
+					<h1 class="titulo-verde mb-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" data-aos-once="true"><?php esc_html_e( 'Así lo construimos', 'geg' ); ?></h1>
 				</div>
 			</div>
 			<div class="row">
