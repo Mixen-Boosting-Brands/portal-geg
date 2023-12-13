@@ -142,6 +142,36 @@
     </footer>
 <?php endif; ?>
 
+    <!-- Modales -->
+    <div class="modal modal-cv fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col mb-3">
+                                <h3 class="modal-title text-uppercase"></h3>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <img alt="" class="thumbnail img-fluid">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <p class="modal-cv"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 	<?php wp_footer(); ?>
 
     <!-- a href="https://wa.me/52614?text=Hola%20FOO%20BAR,%20necesito%20información." class="whatsapp" target="_blank"><i class="fab fa-whatsapp whatsapp-icon"></i></a -->

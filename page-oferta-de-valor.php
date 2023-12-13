@@ -55,7 +55,14 @@
 						<?php if ($the_query->have_posts()): $i = 6; while ($the_query->have_posts()) : $the_query->the_post(); ?>
 							<div class="swiper-slide">
 								<div class="card mb-3" data-aos="fade-right" data-aos-delay="<?php echo $i; ?>00" data-aos-duration="800" data-aos-once="true">
-									<a href="<?php the_permalink(); ?>">
+									<a 
+										href="javascript:void(0)"
+										data-bs-toggle="modal"
+										data-bs-target="#modal"
+										data-bs-titulo="<?php the_title(); ?>"
+										data-bs-thumbnail-url="<?php echo get_the_post_thumbnail_url(get_the_ID(),'proceso'); ?>"
+										data-bs-cv="<?php if( have_rows('datos_del_integrante') ): while( have_rows('datos_del_integrante') ): the_row(); ?><?php if( get_sub_field('cv') ): ?><?php echo get_sub_field('cv'); ?><?php endif; ?><?php endwhile; endif; ?>"
+									>
 										<?php the_post_thumbnail('proceso', array('class' => 'img-fluid')); ?>
 										<div class="card-body">
 											<h5 class="card-title mb-0">

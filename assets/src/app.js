@@ -10,6 +10,7 @@ import '../src/form-contratistas';
 import '../src/form-movimiento-global';
 import '../src/aos';
 import 'jquery-parallax.js';
+import './modals';
 
 // Header
 $(function () {
