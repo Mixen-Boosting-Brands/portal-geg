@@ -21,6 +21,7 @@
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
+    "@types/dompurify": "^3.0.5",
     "babel-loader": "^8.2.5",
     "browser-sync": "^2.27.9",
     "webpack": "^5.72.1",
@@ -33,6 +34,7 @@
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "bootstrap": "^5.2.0-beta1",
+    "dompurify": "^3.0.6",
     "jquery": "^3.7.1",
     "jquery-parallax.js": "^1.5.0",
     "swiper": "^8.2.4"

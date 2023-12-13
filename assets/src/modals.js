@@ -1,6 +1,8 @@
-// Function to encode HTML content
-function encodeHTML(html) {
-    return document.createElement('a').appendChild(document.createTextNode(html)).parentNode.innerHTML;
+import DOMPurify from 'dompurify';
+
+// Function to sanitize HTML content using DOMPurify
+function sanitizeHTML(html) {
+    return DOMPurify.sanitize(html);
 }
 
 // Event listener for modal trigger button
@@ -14,9 +16,9 @@ document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function (button) 
         var thumbnailUrl = button.getAttribute('data-bs-thumbnail-url');
         var cv = button.getAttribute('data-bs-cv');
 
-        // Set modal content
+        // Sanitize and set modal content
         modal.querySelector('.modal-title').innerText = title;
-        modal.querySelector('.modal-cv').innerHTML = encodeHTML(cv); // Encode HTML content
+        modal.querySelector('.modal-cv').innerHTML = sanitizeHTML(cv);
 
         // Other modal content population logic goes here
     });
