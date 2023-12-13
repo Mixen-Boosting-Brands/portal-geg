@@ -1,20 +1,23 @@
-const modal = document.getElementById('modal')
-if (modal) {
-    modal.addEventListener('show.bs.modal', event => {
-        // Button that triggered the modal
-        const button = event.relatedTarget
-        // Extract info from data-bs-* attributes
-        const titulo = button.getAttribute('data-bs-titulo')
-        const thumbnailUrl = button.getAttribute('data-bs-thumbnail-url')
-        const cV = button.getAttribute('data-bs-cv')
-        // If necessary, you could initiate an Ajax request here
-        // and then do the updating in a callback.
-
-        // Update the modal's content.
-        const modalTitulo = modal.querySelector('.modal-title')
-        const modalCV = modal.querySelector('.modal-cv')
-
-        modalTitulo.textContent = `${titulo}`
-        modalCV.textContent = `${cV}`
-    })
+// Function to encode HTML content
+function encodeHTML(html) {
+    return document.createElement('a').appendChild(document.createTextNode(html)).parentNode.innerHTML;
 }
+
+// Event listener for modal trigger button
+document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function (button) {
+    button.addEventListener('click', function () {
+        // Get the modal element
+        var modal = document.querySelector(button.getAttribute('data-bs-target'));
+
+        // Get data attributes
+        var title = button.getAttribute('data-bs-titulo');
+        var thumbnailUrl = button.getAttribute('data-bs-thumbnail-url');
+        var cv = button.getAttribute('data-bs-cv');
+
+        // Set modal content
+        modal.querySelector('.modal-title').innerText = title;
+        modal.querySelector('.modal-cv').innerHTML = encodeHTML(cv); // Encode HTML content
+
+        // Other modal content population logic goes here
+    });
+});
