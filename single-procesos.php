@@ -7,7 +7,7 @@
 	<section class="pt-60 pb-30">
 		<div class="container">
 			<div class="row">
-				<div class="col text-center">
+				<div class="col">
 					<h1 class="titulo-verde mb-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" data-aos-once="true"><?php the_title(); ?></h1>
 				</div>
 			</div>
