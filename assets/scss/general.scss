@@ -289,6 +289,10 @@ ul {
         width: 100%;
         float: left;
         // padding: 50px 30px;
+
+        hr {
+            border-top: 2px solid $font-color-primary;
+        }
     }
 
     .text-muted {

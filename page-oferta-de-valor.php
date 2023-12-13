@@ -62,9 +62,9 @@
 												<?php the_title(); ?>
 											</h5>
 										<?php if( have_rows('datos_del_integrante') ): while( have_rows('datos_del_integrante') ): the_row(); ?>
-											<hr>
+											<hr class="my-1">
 											<?php if( get_sub_field('puesto') ): ?>
-												<p class="text-uppercase"><?php the_sub_field('puesto'); ?></p>
+												<p class="mb-0 text-uppercase"><?php the_sub_field('puesto'); ?></p>
 											<?php endif; ?>
         								<?php endwhile; endif; ?>
 										</div>
