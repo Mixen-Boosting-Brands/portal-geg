@@ -147,21 +147,15 @@
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
+                    <h5 class="modal-title text-uppercase"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
                     <div class="container">
                         <div class="row">
-                            <div class="col mb-3">
-                                <h3 class="modal-title text-uppercase"></h3>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col">
-                                <img alt="" class="thumbnail img-fluid">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
                             <div class="col">
                                 <p class="modal-cv"></p>
                             </div>

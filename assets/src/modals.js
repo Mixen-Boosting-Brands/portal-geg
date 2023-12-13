@@ -12,11 +12,9 @@ if (modal) {
 
         // Update the modal's content.
         const modalTitulo = modal.querySelector('.modal-title')
-        const modalThumbnail = modal.querySelector('.thumbnail')
         const modalCV = modal.querySelector('.modal-cv')
 
         modalTitulo.textContent = `${titulo}`
-        modalThumbnail.src = `${thumbnailUrl}`;
         modalCV.textContent = `${cV}`
     })
 }
