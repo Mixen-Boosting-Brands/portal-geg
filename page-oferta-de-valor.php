@@ -61,7 +61,7 @@
 										data-bs-target="#modal"
 										data-bs-titulo="<?php the_title(); ?>"
 										data-bs-thumbnail-url="<?php echo get_the_post_thumbnail_url(get_the_ID(),'proceso'); ?>"
-										data-bs-cv="<?php if( have_rows('datos_del_integrante') ): while( have_rows('datos_del_integrante') ): the_row(); ?><?php if( get_sub_field('cv') ): ?><?php echo get_sub_field('cv'); ?><?php endif; ?><?php endwhile; endif; ?>"
+										data-bs-cv="<?php if( have_rows('datos_del_integrante') ): while( have_rows('datos_del_integrante') ): the_row(); ?><?php if( get_sub_field('cv') ): ?><?php echo do_shortcode( get_sub_field('cv') ); ?><?php endif; ?><?php endwhile; endif; ?>"
 									>
 										<?php the_post_thumbnail('proceso', array('class' => 'img-fluid')); ?>
 										<div class="card-body">
