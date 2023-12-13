@@ -61,6 +61,12 @@
 											<h5 class="card-title mb-0">
 												<?php the_title(); ?>
 											</h5>
+										<?php if( have_rows('datos_del_integrante') ): while( have_rows('datos_del_integrante') ): the_row(); ?>
+											<hr>
+											<?php if( get_sub_field('puesto') ): ?>
+												<p class="text-uppercase"><?php the_sub_field('puesto'); ?></p>
+											<?php endif; ?>
+        								<?php endwhile; endif; ?>
 										</div>
 									</a>
 								</div>
