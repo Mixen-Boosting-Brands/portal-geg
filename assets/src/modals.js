@@ -5,11 +5,6 @@ function sanitizeHTML(html) {
     return DOMPurify.sanitize(html);
 }
 
-// Function to replace double quotes with HTML entities
-function replaceDoubleQuotes(str) {
-    return str.replace(/"/g, '&quot;');
-}
-
 // Event listener for modal trigger button
 document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function (button) {
     button.addEventListener('click', function () {
@@ -21,12 +16,12 @@ document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function (button) 
         var thumbnailUrl = button.getAttribute('data-bs-thumbnail-url');
         var cv = button.getAttribute('data-bs-cv');
 
-        // Replace double quotes with HTML entities
-        cv = replaceDoubleQuotes(cv);
+        // Encode the entire data-bs-cv attribute value
+        cv = encodeURIComponent(cv);
 
         // Sanitize and set modal content
         modal.querySelector('.modal-title').innerText = title;
-        modal.querySelector('.modal-cv').innerHTML = sanitizeHTML(cv);
+        modal.querySelector('.modal-cv').innerHTML = sanitizeHTML(decodeURIComponent(cv));
 
         // Other modal content population logic goes here
     });
