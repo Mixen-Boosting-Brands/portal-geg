@@ -5,6 +5,14 @@ function sanitizeHTML(html) {
     return DOMPurify.sanitize(html);
 }
 
+// Function to generate PDF viewer dynamically
+function generatePDFViewer(shortcodeId) {
+    // Customize this based on your plugin's requirements
+    var viewerCode = '[dflip id="' + shortcodeId + '"][/dflip]';
+    // Add any additional logic or customization if needed
+    return viewerCode;
+}
+
 // Event listener for modal trigger button
 document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function (button) {
     button.addEventListener('click', function () {
@@ -14,14 +22,14 @@ document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function (button) 
         // Get data attributes
         var title = button.getAttribute('data-bs-titulo');
         var thumbnailUrl = button.getAttribute('data-bs-thumbnail-url');
-        var cv = button.getAttribute('data-bs-cv');
+        var shortcodeId = button.getAttribute('data-bs-cv-id');
 
-        // Encode the entire data-bs-cv attribute value
-        cv = encodeURIComponent(cv);
+        // Generate PDF viewer dynamically
+        var pdfViewerCode = generatePDFViewer(shortcodeId);
 
         // Sanitize and set modal content
         modal.querySelector('.modal-title').innerText = title;
-        modal.querySelector('.modal-cv').innerHTML = sanitizeHTML(decodeURIComponent(cv));
+        modal.querySelector('.modal-cv').innerHTML = sanitizeHTML(pdfViewerCode);
 
         // Other modal content population logic goes here
     });
