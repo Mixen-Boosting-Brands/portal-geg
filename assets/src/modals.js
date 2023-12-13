@@ -31,6 +31,13 @@ document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function (button) 
         modal.querySelector('.modal-title').innerText = title;
         modal.querySelector('.modal-cv').innerHTML = sanitizeHTML(pdfViewerCode);
 
-        // Other modal content population logic goes here
+        // Manually trigger WordPress shortcode processing
+        // You may need to adjust the URL based on your WordPress setup
+        fetch('https://portal.grupogeg.com/wp-admin/admin-ajax.php?action=process_shortcode')
+          .then(response => response.text())
+          .then(() => {
+            // Other modal content population logic goes here
+          })
+          .catch(error => console.error('Error processing shortcode:', error));
     });
 });
