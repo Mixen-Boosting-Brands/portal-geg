@@ -282,6 +282,10 @@ ul {
         &:hover,
         &:focus {
             color: $font-color-verde;
+
+            hr {
+                border-top: 2px solid $font-color-primary;
+            }
         }
     }
 
