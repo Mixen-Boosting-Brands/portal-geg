@@ -13,6 +13,8 @@ function generatePDFViewer(shortcodeId) {
     return viewerCode;
 }
 
+var ajaxurl = 'https://portal.grupogeg.com/wp-admin/admin-ajax.php';
+
 // Function to fetch nonce via AJAX
 function fetchNonce() {
     return new Promise(function (resolve, reject) {
