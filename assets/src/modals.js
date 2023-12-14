@@ -38,6 +38,26 @@ function fetchNonce() {
     });
 }
 
+// Function to make the actual AJAX request
+function makeAjaxRequest(nonce, pdfViewerCode) {
+    return new Promise(function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', ajaxurl, true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                resolve(xhr.responseText);
+            } else {
+                reject(new Error('Failed to process shortcode'));
+            }
+        };
+        xhr.onerror = function () {
+            reject(new Error('Network error occurred while processing shortcode'));
+        };
+        xhr.send('action=parse-media-shortcode&content=' + encodeURIComponent(pdfViewerCode) + '&nonce=' + encodeURIComponent(nonce));
+    });
+}
+
 // Function to fetch processed content via AJAX
 function fetchProcessedContent(nonce, shortcode) {
     return new Promise(function (resolve, reject) {
@@ -79,7 +99,17 @@ document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function (button) 
         fetchNonce()
             .then(function (nonce) {
                 // Use the obtained nonce in your actual AJAX request
-                makeAjaxRequest(nonce, pdfViewerCode);
+                makeAjaxRequest(nonce, pdfViewerCode)
+                    .then(function (processedContent) {
+                        // Sanitize and set modal content
+                        modal.querySelector('.modal-title').innerText = title;
+                        modal.querySelector('.modal-cv').innerHTML = sanitizeHTML(processedContent);
+
+                        // Other modal content population logic goes here
+                    })
+                    .catch(function (error) {
+                        console.error('Error processing shortcode:', error);
+                    });
             })
             .catch(function (error) {
                 console.error('Error fetching nonce:', error);
