@@ -154,7 +154,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col">
-                                <span class="modal-cv"></span>
+                                <span class="modal-cv-pages"></span>
                             </div>
                         </div>
                     </div>
