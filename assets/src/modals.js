@@ -32,14 +32,22 @@ document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function (button) 
         hiddenDiv.innerHTML = pdfViewerCode;
 
         // Extract and process the shortcode
-        var processedContent = hiddenDiv.innerHTML; // Use innerHTML instead of outerHTML
+        var processedContent = hiddenDiv.innerHTML;
+
+        // Manually trigger WordPress shortcode processing
+        var dummyElement = document.createElement('div');
+        dummyElement.innerHTML = processedContent;
+        document.body.appendChild(dummyElement);
 
         // Log the processed content to the console
         console.log(processedContent);
 
         // Sanitize and set modal content
         modal.querySelector('.modal-title').innerText = title;
-        modal.querySelector('.modal-cv').innerHTML = sanitizeHTML(processedContent);
+        modal.querySelector('.modal-cv').innerHTML = sanitizeHTML(dummyElement.innerHTML);
+
+        // Remove the dummy element
+        document.body.removeChild(dummyElement);
 
         // Other modal content population logic goes here
     });
