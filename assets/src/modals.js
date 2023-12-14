@@ -17,7 +17,7 @@ function generatePDFViewer(shortcodeId) {
 function fetchProcessedContent(shortcode) {
     return new Promise(function (resolve, reject) {
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://portal.grupogeg.com/wp-admin/admin-ajax.php', true);
+        xhr.open('POST', 'https://grupogeg.com/wp-admin/admin-ajax.php', true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
         xhr.onload = function () {
             if (xhr.status >= 200 && xhr.status < 300) {
