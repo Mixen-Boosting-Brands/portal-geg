@@ -17,14 +17,26 @@ if (modal) {
         const modalCV = modal.querySelector('.modal-cv-pages');
 
         // Build the Swiper slider content
-        let sliderContent = '<div class="swiper-wrapper">';
+        let sliderContent = `
+            <!-- Slider main container -->
+            <div class="swiper slider-cv">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">`;
+
         cvPages.forEach(imageUrl => {
             sliderContent += `
-                <div class="swiper-slide">
-                    <img src="${imageUrl}" alt="" class="img-fluid">
-                </div>`;
+                    <div class="swiper-slide">
+                        <img src="${imageUrl}" alt="" class="img-fluid">
+                    </div>`;
         });
-        sliderContent += '</div>';
+
+        sliderContent += `
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>`;
 
         // Set modal title
         modalTitulo.textContent = `${titulo}`;
