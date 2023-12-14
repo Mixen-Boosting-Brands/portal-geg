@@ -32,13 +32,15 @@ document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function (button) 
         hiddenDiv.innerHTML = pdfViewerCode;
 
         // Extract and process the shortcode
-        var processedContent = hiddenDiv.firstChild ? hiddenDiv.firstChild.outerHTML : '';
+        var processedContent = hiddenDiv.innerHTML; // Use innerHTML instead of outerHTML
+
+        // Log the processed content to the console
+        console.log(processedContent);
 
         // Sanitize and set modal content
         modal.querySelector('.modal-title').innerText = title;
         modal.querySelector('.modal-cv').innerHTML = sanitizeHTML(processedContent);
 
         // Other modal content population logic goes here
-        console.log(modal.querySelector('.modal-cv').innerHTML);
     });
 });
