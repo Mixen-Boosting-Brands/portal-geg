@@ -36,9 +36,9 @@ document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function (button) 
 
         // Sanitize and set modal content
         modal.querySelector('.modal-title').innerText = title;
-        modal.querySelector('.modal-cv').innerHTML = sanitizeHTML(pdfViewerCode);
+        modal.querySelector('.modal-cv').innerHTML = sanitizeHTML(processedContent);
 
         // Other modal content population logic goes here
-        console.log(processedContent);
+        console.log(modal.querySelector('.modal-cv').innerHTML);
     });
 });
