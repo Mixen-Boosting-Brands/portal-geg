@@ -17,15 +17,24 @@
 			</div>
 			<div class="row" data-aos="fade-right" data-aos-delay="900" data-aos-duration="800" data-aos-once="true">
 				<div class="col">
-				<?php if ( have_posts()) : while ( have_posts() ) : the_post(); ?>
-					<?php the_content(); ?>
-					<div class="mt-4">
-						<?php comments_template(); ?>
+					<!-- Slider main container -->
+					<div class="swiper slider-oferta-de-valor">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+						<?php if( have_rows('slides') ): while( have_rows('slides') ): the_row(); ?>
+							<?php if( get_sub_field('slide') ): ?>
+							<div class="swiper-slide">
+								<img src="<?php echo get_sub_field('slide'); ?>" alt="" class="img-fluid">
+							</div>
+							<?php endif; ?>
+						<?php endwhile; endif; ?>
+						</div>
+
+						<!-- If we need navigation buttons -->
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
 					</div>
-				<?php endwhile; ?>
-				<?php else : ?>
-					<p><?php esc_html_e( 'Lo sentimos, no hay nada que mostrar aquí.', 'geg' ); ?></p>
-				<?php endif; ?>
 				</div>
 			</div>
 		</div>

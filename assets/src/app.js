@@ -146,32 +146,41 @@ const sliderProcesos = new Swiper('.slider-procesos', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     }
-  });
+});
 
-// Your main AJAX request
-function makeAjaxRequest() {
-    // Make a separate AJAX request to get the nonce
-    var nonceRequest = new XMLHttpRequest();
-    nonceRequest.open('GET', ajaxurl + '?action=get_nonce', true);
-    nonceRequest.onreadystatechange = function () {
-        if (nonceRequest.readyState === 4 && nonceRequest.status === 200) {
-            var nonce = JSON.parse(nonceRequest.responseText).data.nonce;
+const sliderOfertaDeValor= new Swiper('.slider-oferta-de-valor', {
+    // Optional parameters
+    slidesPerView: 1,
+    spaceBetween: 30,
+    grabCursor: true,
 
-            // Now, use the obtained nonce in your actual AJAX request
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', ajaxurl, true);
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    // Process the response
-                    console.log(xhr.responseText);
-                }
-            };
-
-            // Include the nonce in the data
-            var data = 'action=parse-media-shortcode&security=' + encodeURIComponent(nonce) + '&other_data=value';
-            xhr.send(data);
+    // Responsive breakpoints
+    breakpoints: {
+        400: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+        },
+        576: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        992: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        1200: {
+            slidesPerView: 1,
+            spaceBetween: 30,
         }
-    };
-    nonceRequest.send();
-}
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+});
