@@ -46,12 +46,40 @@ if (modal) {
 
         // Initialize Swiper
         const mySwiper = new Swiper('.modal-cv .swiper', {
-            // Swiper options (customize as needed)
-            loop: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+             // Optional parameters
+            slidesPerView: 1,
+            spaceBetween: 30,
+            grabCursor: true,
+
+            // Responsive breakpoints
+            breakpoints: {
+                400: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                },
+                576: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                },
+                768: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                },
+                992: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                },
+                1200: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                }
             },
+        
+            // Navigation arrows
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            }
         });
     });
 }
