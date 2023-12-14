@@ -13,6 +13,26 @@ function generatePDFViewer(shortcodeId) {
     return viewerCode;
 }
 
+// Function to fetch processed content via AJAX
+function fetchProcessedContent(shortcode) {
+    return new Promise(function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://portal.grupogeg.com/wp-admin/admin-ajax.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                resolve(xhr.responseText);
+            } else {
+                reject(new Error('Failed to fetch processed content'));
+            }
+        };
+        xhr.onerror = function () {
+            reject(new Error('Network error occurred while fetching processed content'));
+        };
+        xhr.send('action=process_shortcode&content=' + encodeURIComponent(shortcode));
+    });
+}
+
 // Event listener for modal trigger button
 document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function (button) {
     button.addEventListener('click', function () {
@@ -27,28 +47,17 @@ document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function (button) 
         // Generate PDF viewer dynamically
         var pdfViewerCode = generatePDFViewer(shortcodeId);
 
-        // Create a hidden div to temporarily hold the shortcode
-        var hiddenDiv = document.createElement('div');
-        hiddenDiv.innerHTML = pdfViewerCode;
+        // Fetch processed content via AJAX
+        fetchProcessedContent(pdfViewerCode)
+            .then(function (processedContent) {
+                // Sanitize and set modal content
+                modal.querySelector('.modal-title').innerText = title;
+                modal.querySelector('.modal-cv').innerHTML = sanitizeHTML(processedContent);
 
-        // Extract and process the shortcode
-        var processedContent = hiddenDiv.innerHTML;
-
-        // Manually trigger WordPress shortcode processing
-        var dummyElement = document.createElement('div');
-        dummyElement.innerHTML = processedContent;
-        document.body.appendChild(dummyElement);
-
-        // Log the processed content to the console
-        console.log(processedContent);
-
-        // Sanitize and set modal content
-        modal.querySelector('.modal-title').innerText = title;
-        modal.querySelector('.modal-cv').innerHTML = sanitizeHTML(dummyElement.innerHTML);
-
-        // Remove the dummy element
-        document.body.removeChild(dummyElement);
-
-        // Other modal content population logic goes here
+                // Other modal content population logic goes here
+            })
+            .catch(function (error) {
+                console.error('Error fetching processed content:', error);
+            });
     });
 });
