@@ -17,7 +17,7 @@ function generatePDFViewer(shortcodeId) {
 function fetchProcessedContent(shortcode) {
     return new Promise(function (resolve, reject) {
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://grupogeg.com/wp-admin/admin-ajax.php', true);
+        xhr.open('POST', 'https://portal.grupogeg.com/wp-admin/admin-ajax.php', true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
         xhr.onload = function () {
             if (xhr.status >= 200 && xhr.status < 300) {
@@ -29,7 +29,7 @@ function fetchProcessedContent(shortcode) {
         xhr.onerror = function () {
             reject(new Error('Network error occurred while fetching processed content'));
         };
-        xhr.send('action=process_shortcode&content=' + encodeURIComponent(shortcode));
+        xhr.send('action=parse-media-shortcode&content=' + encodeURIComponent(shortcode));
     });
 }
 
