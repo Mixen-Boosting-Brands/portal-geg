@@ -154,7 +154,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col">
-                                <p class="modal-cv"></p>
+                                <span class="modal-cv"></span>
                             </div>
                         </div>
                     </div>
