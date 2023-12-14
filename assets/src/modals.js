@@ -39,6 +39,6 @@ document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function (button) 
         modal.querySelector('.modal-cv').innerHTML = sanitizeHTML(processedContent);
 
         // Other modal content population logic goes here
-        console.log(pdfViewerCode);
+        console.log(processedContent);
     });
 });
