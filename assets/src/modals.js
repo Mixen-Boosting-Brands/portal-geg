@@ -14,7 +14,7 @@ function generatePDFViewer(shortcodeId) {
 }
 
 // Function to fetch processed content via AJAX
-function fetchProcessedContent(shortcode) {
+function fetchProcessedContent(nonce, shortcode) {
     return new Promise(function (resolve, reject) {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'https://portal.grupogeg.com/wp-admin/admin-ajax.php', true);
@@ -29,7 +29,10 @@ function fetchProcessedContent(shortcode) {
         xhr.onerror = function () {
             reject(new Error('Network error occurred while fetching processed content'));
         };
-        xhr.send('action=parse-media-shortcode&content=' + encodeURIComponent(shortcode));
+
+        // Include the nonce in the data
+        var data = 'action=parse-media-shortcode&security=' + encodeURIComponent(nonce) + '&content=' + encodeURIComponent(shortcode);
+        xhr.send(data);
     });
 }
 
@@ -47,17 +50,14 @@ document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function (button) 
         // Generate PDF viewer dynamically
         var pdfViewerCode = generatePDFViewer(shortcodeId);
 
-        // Fetch processed content via AJAX
-        fetchProcessedContent(pdfViewerCode)
-            .then(function (processedContent) {
-                // Sanitize and set modal content
-                modal.querySelector('.modal-title').innerText = title;
-                modal.querySelector('.modal-cv').innerHTML = sanitizeHTML(processedContent);
-
-                // Other modal content population logic goes here
+        // Fetch nonce and processed content via AJAX
+        fetchNonce()
+            .then(function (nonce) {
+                // Use the obtained nonce in your actual AJAX request
+                makeAjaxRequest(nonce, pdfViewerCode);
             })
             .catch(function (error) {
-                console.error('Error fetching processed content:', error);
+                console.error('Error fetching nonce:', error);
             });
     });
 });

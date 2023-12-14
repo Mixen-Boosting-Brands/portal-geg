@@ -438,26 +438,14 @@ function html5_shortcode_demo_2( $atts, $content = null ) {
     ChatGPT functions
 \*------------------------------------*/
 
-// Register the AJAX action and specify the callback function
-add_action('wp_ajax_process_shortcode', 'process_shortcode_callback');
-
-// Callback function for handling the AJAX request
-function process_shortcode_callback() {
-    // Verify nonce for security (optional but recommended)
-    check_ajax_referer('your_nonce_key', 'security');
-
-    // Get the content parameter from the AJAX request
-    $shortcode_content = sanitize_text_field($_POST['content']);
-
-    // Process the shortcode content (example: echo it for testing)
-    echo do_shortcode($shortcode_content);
-
-    // Important: Always use die() to end the AJAX request
-    die();
+// Generate and include nonce in the AJAX response
+function add_nonce_to_ajax_response() {
+    $nonce = wp_create_nonce('parse_media_shortcode_nonce');
+    wp_send_json_success(array('nonce' => $nonce));
 }
 
-// Optional: Add the same action for non-logged-in users
-add_action('wp_ajax_nopriv_process_shortcode', 'process_shortcode_callback');
+add_action('wp_ajax_get_nonce', 'add_nonce_to_ajax_response');
+add_action('wp_ajax_nopriv_get_nonce', 'add_nonce_to_ajax_response');
 
 /*------------------------------------*\
     Bootstrap Pagination

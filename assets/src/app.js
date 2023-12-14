@@ -147,3 +147,31 @@ const sliderProcesos = new Swiper('.slider-procesos', {
       prevEl: '.swiper-button-prev',
     }
   });
+
+// Your main AJAX request
+function makeAjaxRequest() {
+    // Make a separate AJAX request to get the nonce
+    var nonceRequest = new XMLHttpRequest();
+    nonceRequest.open('GET', ajaxurl + '?action=get_nonce', true);
+    nonceRequest.onreadystatechange = function () {
+        if (nonceRequest.readyState === 4 && nonceRequest.status === 200) {
+            var nonce = JSON.parse(nonceRequest.responseText).data.nonce;
+
+            // Now, use the obtained nonce in your actual AJAX request
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', ajaxurl, true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Process the response
+                    console.log(xhr.responseText);
+                }
+            };
+
+            // Include the nonce in the data
+            var data = 'action=parse-media-shortcode&security=' + encodeURIComponent(nonce) + '&other_data=value';
+            xhr.send(data);
+        }
+    };
+    nonceRequest.send();
+}
