@@ -13,6 +13,29 @@ function generatePDFViewer(shortcodeId) {
     return viewerCode;
 }
 
+// Function to fetch nonce via AJAX
+function fetchNonce() {
+    return new Promise(function (resolve, reject) {
+        var nonceRequest = new XMLHttpRequest();
+        nonceRequest.open('GET', ajaxurl + '?action=get_nonce', true);
+        nonceRequest.onreadystatechange = function () {
+            if (nonceRequest.readyState === 4) {
+                if (nonceRequest.status === 200) {
+                    var response = JSON.parse(nonceRequest.responseText);
+                    if (response.success && response.data && response.data.nonce) {
+                        resolve(response.data.nonce);
+                    } else {
+                        reject(new Error('Invalid nonce response'));
+                    }
+                } else {
+                    reject(new Error('Failed to fetch nonce'));
+                }
+            }
+        };
+        nonceRequest.send();
+    });
+}
+
 // Function to fetch processed content via AJAX
 function fetchProcessedContent(nonce, shortcode) {
     return new Promise(function (resolve, reject) {
