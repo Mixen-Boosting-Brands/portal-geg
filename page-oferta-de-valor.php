@@ -56,7 +56,7 @@
 							$args = array(
 								'post_type' => 'equipo',
 								'posts_per_page' => -1,
-								// 'post__not_in'   => array($current_post_id), // Exclude the current post
+								'post__not_in'   => array($current_post_id), // Exclude the current post
 							);
 
 							$the_query = new WP_Query( $args );
