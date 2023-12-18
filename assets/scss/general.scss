@@ -976,6 +976,11 @@ footer {
     }
 }
 
+.wp-block-gallery {
+    --wp--style--unstable-gallery-gap: var(--wp--style--gallery-gap-default, var( --gallery-block--gutter-size, var( --wp--style--block-gap, 0em ) ) );
+    gap: var(--wp--style--gallery-gap-default, var( --gallery-block--gutter-size, var( --wp--style--block-gap, 0em ) ) );
+}
+
 /* Make YouTube videos inserted via WordPress oEmbed full-width */
 .video-container { 
     position: relative; 
