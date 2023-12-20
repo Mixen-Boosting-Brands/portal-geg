@@ -51,7 +51,6 @@ if (modal) {
             slidesPerView: 1,
             spaceBetween: 30,
             grabCursor: true,
-            lazy: true,
 
             // Responsive breakpoints
             breakpoints: {
