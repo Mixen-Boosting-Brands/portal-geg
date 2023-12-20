@@ -236,7 +236,7 @@
                                             <a class="nav-link" href="<?php echo get_page_link('21'); ?>"><?php echo get_the_title('21'); ?></a>
                                         </li>
                                         <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('357'); ?>"><?php echo get_the_title('25'); ?></a>
+                                            <a class="nav-link" href="<?php echo get_page_link('357'); ?>"><?php echo get_the_title('357'); ?></a>
                                         </li>
                                     </ul>
                                 </div>
