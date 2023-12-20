@@ -27,6 +27,7 @@ if (modal) {
             sliderContent += `
                     <div class="swiper-slide">
                         <img src="${imageUrl}" alt="" class="img-fluid" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
                     </div>`;
         });
 

@@ -26,6 +26,7 @@
 							<?php if( get_sub_field('slide') ): ?>
 							<div class="swiper-slide">
 								<img src="<?php echo get_sub_field('slide'); ?>" alt="" class="img-fluid" loading="lazy">
+								<div class="swiper-lazy-preloader"></div>
 							</div>
 							<?php endif; ?>
 						<?php endwhile; endif; ?>
