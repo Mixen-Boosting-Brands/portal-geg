@@ -26,7 +26,7 @@ if (modal) {
         cvPages.forEach(imageUrl => {
             sliderContent += `
                     <div class="swiper-slide">
-                        <img src="${imageUrl}" alt="" class="img-fluid">
+                        <img src="${imageUrl}" alt="" class="img-fluid" loading="lazy">
                     </div>`;
         });
 
