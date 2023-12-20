@@ -167,9 +167,7 @@
 
     <!-- a href="https://wa.me/52614?text=Hola%20FOO%20BAR,%20necesito%20información." class="whatsapp" target="_blank"><i class="fab fa-whatsapp whatsapp-icon"></i></a -->
 
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/app.bundle.js?ver=<?php echo rand(111,999)?>"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
