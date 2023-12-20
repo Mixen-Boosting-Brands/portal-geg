@@ -51,6 +51,7 @@ if (modal) {
             slidesPerView: 1,
             spaceBetween: 30,
             grabCursor: true,
+            lazy: true,
 
             // Responsive breakpoints
             breakpoints: {
@@ -78,8 +79,8 @@ if (modal) {
         
             // Navigation arrows
             navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             }
         });
     });
