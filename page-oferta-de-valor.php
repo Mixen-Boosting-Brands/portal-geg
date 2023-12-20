@@ -25,7 +25,7 @@
 						<?php if( have_rows('slides') ): while( have_rows('slides') ): the_row(); ?>
 							<?php if( get_sub_field('slide') ): ?>
 							<div class="swiper-slide">
-								<img src="<?php echo get_sub_field('slide'); ?>" alt="" class="img-fluid">
+								<img src="<?php echo get_sub_field('slide'); ?>" alt="" class="img-fluid" loading="lazy">
 							</div>
 							<?php endif; ?>
 						<?php endwhile; endif; ?>
