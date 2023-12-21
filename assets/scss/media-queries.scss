@@ -53,6 +53,12 @@
              }
         }
     }
+
+    .card {
+        .card-body {
+            min-height: 114px;
+        }
+    }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -263,6 +269,12 @@
             flex: 1 0 21% !important;
         }
     }
+
+    .card {
+        .card-body {
+            min-height: 138px;
+        }
+    }
 }
 
 // X-Large devices (large desktops, 1200px and up)
@@ -319,6 +331,10 @@
                 border-width: 0 60px 450px 0; 
                 border-color: transparent $secondary transparent transparent;
             }
+        }
+
+        .card-body {
+            min-height: 114px;
         }
     }
 
