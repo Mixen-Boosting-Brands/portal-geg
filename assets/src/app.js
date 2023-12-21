@@ -184,3 +184,21 @@ const sliderOfertaDeValor= new Swiper('.slider-oferta-de-valor', {
       prevEl: '.swiper-button-prev',
     }
 });
+
+const sliderJetpack = new Swiper('.jp-carousel-wrap', {
+    // Optional parameters
+    slidesPerView: 1,
+    spaceBetween: 30,
+    grabCursor: true,
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // Thumbs
+    thumbs: {
+        swiper: swiper,
+    }
+});
