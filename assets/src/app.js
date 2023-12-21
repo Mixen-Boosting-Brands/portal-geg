@@ -199,6 +199,6 @@ const sliderJetpack = new Swiper('.jp-carousel-wrap', {
 
     // Thumbs
     thumbs: {
-        swiper: swiper,
+        swiper: sliderJetpack,
     }
 });
