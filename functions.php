@@ -31,7 +31,8 @@ if ( function_exists( 'add_theme_support' ) ) {
     add_image_size( 'category', 594, 368, true ); // Custom Thumbnail Size call using the_post_thumbnail('category');
     add_image_size( 'vacante', 266, 478, true ); // Custom Thumbnail Size call using the_post_thumbnail('vacante');
     add_image_size( 'proceso', 400, 400, true ); // Custom Thumbnail Size call using the_post_thumbnail('proceso');
-    // add_image_size( 'category', 300, 200, true ); // Custom Thumbnail Size call using the_post_thumbnail('category');
+    add_image_size( 'integrante', 400, 500, true ); // Custom Thumbnail Size call using the_post_thumbnail('proceso');
+    // add_image_size( 'category', 300, 200, true ); // Custom Thumbnail Size call using the_post_thumbnail('integrante');
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use.
     /*add_theme_support('custom-background', array(
