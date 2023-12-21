@@ -73,15 +73,17 @@
 						>
 							<?php the_post_thumbnail('integrante', array('class' => 'img-fluid')); ?>
 							<div class="card-body">
-								<h5 class="card-title mb-0">
-									<?php the_title(); ?>
-								</h5>
-							<?php if( have_rows('datos_del_integrante') ): while( have_rows('datos_del_integrante') ): the_row(); ?>
-								<hr class="my-1">
-								<?php if( get_sub_field('puesto') ): ?>
-									<p class="mb-0 text-uppercase"><?php the_sub_field('puesto'); ?></p>
-								<?php endif; ?>
-							<?php endwhile; endif; ?>
+								<div>
+									<h5 class="card-title mb-0">
+										<?php the_title(); ?>
+									</h5>
+								<?php if( have_rows('datos_del_integrante') ): while( have_rows('datos_del_integrante') ): the_row(); ?>
+									<hr class="my-1">
+									<?php if( get_sub_field('puesto') ): ?>
+										<p class="mb-0 text-uppercase"><?php the_sub_field('puesto'); ?></p>
+									<?php endif; ?>
+								<?php endwhile; endif; ?>
+								</div>
 							</div>
 						</a>
 					</div>

@@ -288,6 +288,9 @@ ul {
     .card-body {
         width: 100%;
         float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         // padding: 50px 30px;
 
         hr {
