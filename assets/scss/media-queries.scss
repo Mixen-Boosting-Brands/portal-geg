@@ -54,9 +54,11 @@
         }
     }
 
-    .card {
-        .card-body {
-            min-height: 114px;
+    .equipo {
+        .card {
+            .card-body {
+                min-height: 114px;
+            }
         }
     }
 }
@@ -270,9 +272,11 @@
         }
     }
 
-    .card {
-        .card-body {
-            min-height: 138px;
+    .equipo {
+        .card {
+            .card-body {
+                min-height: 138px;
+            }
         }
     }
 }
@@ -332,10 +336,6 @@
                 border-color: transparent $secondary transparent transparent;
             }
         }
-
-        .card-body {
-            min-height: 114px;
-        }
     }
 
     .proyectos {
@@ -343,6 +343,14 @@
             .carousel-cell {
                 height: 398px;
              }
+        }
+    }
+
+    .equipo {
+        .card {
+            .card-body {
+                min-height: 114px;
+            }
         }
     }
 }

@@ -41,7 +41,7 @@
 		</div>
 	</section>
 
-	<section class="pt-30 pb-60">
+	<section class="equipo pt-30 pb-60">
 		<div class="container">
 			<div class="row">
 				<div class="col">
