@@ -27,7 +27,7 @@
 		</div>
 	</section>
 
-	<section class="pt-30 pb-60">
+	<section class="procesos pt-30 pb-60">
 		<div class="container">
 			<div class="row">
 				<div class="col">
