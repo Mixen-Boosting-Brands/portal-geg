@@ -8,7 +8,7 @@
     <?php include get_template_directory() . '/includes/header-interna.php'; ?>
     <!-- /Incluir header interna -->
 
-	<section class="py-60">
+	<section class="procesos py-60">
 		<div class="container">
 			<div class="row">
 				<div class="col">
