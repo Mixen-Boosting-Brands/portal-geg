@@ -14,7 +14,7 @@
         </div>
     </section>
 
-	<section class="py-60">
+	<section class="titulos-no-italica py-60">
         <div class="container">
             <div class="row">
                 <div class="col text-center" data-aos="fade-right" data-aos-delay="300" data-aos-duration="800" data-aos-once="true">
@@ -29,7 +29,7 @@
         </div>
     </section>
 
-	<section class="articulos py-60">
+	<section class="titulos-no-italica articulos py-60">
 		<div class="container">
 			<div class="row mb-4">
 				<?php get_template_part( 'loop' ); ?>

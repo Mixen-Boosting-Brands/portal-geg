@@ -9,7 +9,7 @@
         </div>
     </section>
 
-	<section class="py-60">
+	<section class="titulos-no-italica py-60">
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">

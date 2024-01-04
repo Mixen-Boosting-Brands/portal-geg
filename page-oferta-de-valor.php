@@ -8,7 +8,7 @@
     <?php include get_template_directory() . '/includes/header-interna.php'; ?>
     <!-- /Incluir header interna -->
 
-	<section class="pt-60 pb-30">
+	<section class="titulos-no-italica pt-60 pb-30">
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -41,7 +41,7 @@
 		</div>
 	</section>
 
-	<section class="equipo pt-30 pb-60">
+	<section class="titulos-no-italica equipo pt-30 pb-60">
 		<div class="container">
 			<div class="row">
 				<div class="col">

@@ -8,7 +8,7 @@
         </div>
     </section>
 
-	<section class="articulos py-60">
+	<section class="titulos-no-italica articulos py-60">
 		<div class="container">
 			<div class="row mb-4">
 				<?php get_template_part( 'loop' ); ?>
