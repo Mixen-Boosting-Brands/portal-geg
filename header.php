@@ -1,17 +1,33 @@
-<?php $currentlang = get_bloginfo('language'); ?>
+<?php $currentlang = get_bloginfo("language"); ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta charset="<?php bloginfo("charset"); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php wp_title( '' ); ?><?php if ( wp_title( '', false ) ) { echo ' - '; } ?><?php bloginfo( 'name' ); ?></title>
+    <title><?php
+    wp_title("");
+    if (wp_title("", false)) {
+        echo " - ";
+    }
+    bloginfo("name");
+    ?></title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url( get_template_directory_uri() ); ?>/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon-16x16.png">
-    <link rel="manifest" href="<?php echo esc_url( get_template_directory_uri() ); ?>/site.webmanifest">
-    <link rel="mask-icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url(
+        get_template_directory_uri()
+    ); ?>/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo esc_url(
+        get_template_directory_uri()
+    ); ?>/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo esc_url(
+        get_template_directory_uri()
+    ); ?>/favicon-16x16.png">
+    <link rel="manifest" href="<?php echo esc_url(
+        get_template_directory_uri()
+    ); ?>/site.webmanifest">
+    <link rel="mask-icon" href="<?php echo esc_url(
+        get_template_directory_uri()
+    ); ?>/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#000000">
 
@@ -19,7 +35,9 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/styles.css?ver=<?php echo rand(111,999)?>">
+    <link rel="stylesheet" href="<?php echo esc_url(
+        get_template_directory_uri()
+    ); ?>/assets/css/styles.css?ver=<?php echo rand(111, 999); ?>">
 
 	<?php wp_head(); ?>
 
@@ -45,112 +63,146 @@
             </a>
         </li>
         <li class="google-podcasts">
-            <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy9kOGIyM2I4NC9wb2RjYXN0L3Jzcw?sa=X&ved=0CAMQ4aUDahcKEwiYkovC7vz9AhUAAAAAHQAAAAAQAQ" target="_blank">
-                <img class="img-fluid" src="https://img.icons8.com/ios-filled/50/000000/google-podcasts.png" alt="" />
+            <a href="https://music.youtube.com/playlist?list=PLO1pdffn_uJq15LBTf9BNV6e4uOjIwPca&si=S58FOypLNvI6VxIY" target="_blank">
+                <img class="img-fluid" src="<?php echo esc_url(
+                    get_template_directory_uri()
+                ); ?>/assets/images/logo-youtube-music.png" alt="YouTube Music" />
             </a>
         </li>
     </ul>
     <ul class="list-inline btn-lang">
         <li class="list-inline-item">
-        <?php 
-            include get_theme_file_path( '/includes/lang-switcher.php' );
-            if ($langs_array) :
-        ?>  
-            <?php foreach ($langs_array as $lang) : ?>
-            <a class="btn btn-primary me-2" href="<?php echo $lang['url']; ?>">
-                <?php echo $lang['name']; ?>
+        <?php
+        include get_theme_file_path("/includes/lang-switcher.php");
+        if ($langs_array): ?>
+            <?php foreach ($langs_array as $lang): ?>
+            <a class="btn btn-primary me-2" href="<?php echo $lang["url"]; ?>">
+                <?php echo $lang["name"]; ?>
             </a>
             <?php endforeach; ?>
-        <?php endif; ?>
+        <?php endif;
+        ?>
         </li>
     </ul>
     <ul class="list-inline btn-intranet">
         <li class="list-inline-item">
             <a class="btn btn-primary me-2" href="https://intraweb.grupogeg.com/">
-                <?php esc_html_e( 'Intranet', 'geg' ); ?>
+                <?php esc_html_e("Intranet", "geg"); ?>
             </a>
         </li>
     </ul>
     <div id="backdrop"></div>
     <!-- div id="backdrop-buscar">
-        <php 
+        <php
             include get_theme_file_path( '/includes/searchform.php' );
-        >  
+        >
     </div -->
     <div class="menu">
         <a id="cerrar-menu" href="javascript:void(0)">
             <i class="fas fa-times"></i>
         </a>
         <div class="menu-contenido">
-            <a id="btn-logo" href="<?php echo esc_url( home_url() ); ?>">
-                <img class="logo img-fluid" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/logo.png" alt="">
+            <a id="btn-logo" href="<?php echo esc_url(home_url()); ?>">
+                <img class="logo img-fluid" src="<?php echo esc_url(
+                    get_template_directory_uri()
+                ); ?>/assets/images/logo.png" alt="">
             </a>
             <nav>
                 <ul class="list-unstyled">
-                <?php if ( $currentlang == "en-US" ): ?>
+                <?php if ($currentlang == "en-US"): ?>
                     <li>
-                        <a href="<?php echo get_page_link('21'); ?>"><?php echo get_the_title('21'); ?></a>
+                        <a href="<?php echo get_page_link(
+                            "21"
+                        ); ?>"><?php echo get_the_title("21"); ?></a>
                     </li>
                     <li>
-                        <a href="<?php echo get_page_link('25'); ?>"><?php echo get_the_title('357'); ?></a>
+                        <a href="<?php echo get_page_link(
+                            "25"
+                        ); ?>"><?php echo get_the_title("357"); ?></a>
                     </li>
                 <?php else: ?>
                     <li>
-                        <a href="<?php echo get_page_link('2'); ?>"><?php echo get_the_title('2'); ?></a>
+                        <a href="<?php echo get_page_link(
+                            "2"
+                        ); ?>"><?php echo get_the_title("2"); ?></a>
                     </li>
                     <li>
-                        <a href="<?php echo get_page_link('23'); ?>"><?php echo get_the_title('23'); ?></a>
+                        <a href="<?php echo get_page_link(
+                            "23"
+                        ); ?>"><?php echo get_the_title("23"); ?></a>
                     </li>
                 <?php endif; ?>
                 </ul>
             </nav>
-        <?php if ( $currentlang == "en-US" ): ?>
-            <a href="https://grupogeg.com/en/contact-us/" class="btn btn-primary" id="btn-contacto"><?php esc_html_e( 'Contáctanos', 'geg' ); ?></a>
+        <?php if ($currentlang == "en-US"): ?>
+            <a href="https://grupogeg.com/en/contact-us/" class="btn btn-primary" id="btn-contacto"><?php esc_html_e(
+                "Contáctanos",
+                "geg"
+            ); ?></a>
         <?php else: ?>
-            <a href="https://grupogeg.com/contactanos/" class="btn btn-primary" id="btn-contacto"><?php esc_html_e( 'Contáctanos', 'geg' ); ?></a>
+            <a href="https://grupogeg.com/contactanos/" class="btn btn-primary" id="btn-contacto"><?php esc_html_e(
+                "Contáctanos",
+                "geg"
+            ); ?></a>
         <?php endif; ?>
-    <?php if( have_rows('datos_de_contacto', 'option') ): while( have_rows('datos_de_contacto', 'option') ): the_row(); ?>
-        <?php if( have_rows('redes_sociales') ): while( have_rows('redes_sociales') ): the_row(); ?>
+    <?php if (have_rows("datos_de_contacto", "option")):
+        while (have_rows("datos_de_contacto", "option")):
+            the_row(); ?>
+        <?php if (have_rows("redes_sociales")):
+            while (have_rows("redes_sociales")):
+                the_row(); ?>
             <div class="social">
                 <ul class="list-inline">
-                <?php if( get_sub_field('linkedin') ): ?>
+                <?php if (get_sub_field("linkedin")): ?>
                     <li class="list-inline-item">
-                        <a href="<?php the_sub_field('linkedin'); ?>" target="_blank">
+                        <a href="<?php the_sub_field(
+                            "linkedin"
+                        ); ?>" target="_blank">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
                     </li>
                 <?php endif; ?>
-                <?php if( get_sub_field('youtube') ): ?>
+                <?php if (get_sub_field("youtube")): ?>
                     <li class="list-inline-item">
-                        <a href="<?php the_sub_field('youtube'); ?>" target="_blank">
+                        <a href="<?php the_sub_field(
+                            "youtube"
+                        ); ?>" target="_blank">
                             <i class="fa-brands fa-youtube"></i>
                         </a>
                     </li>
                 <?php endif; ?>
-                <?php if( get_sub_field('facebook') ): ?>
+                <?php if (get_sub_field("facebook")): ?>
                     <li class="list-inline-item">
-                        <a href="<?php the_sub_field('facebook'); ?>" target="_blank">
+                        <a href="<?php the_sub_field(
+                            "facebook"
+                        ); ?>" target="_blank">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
                     </li>
                 <?php endif; ?>
-                <?php if( get_sub_field('instagram') ): ?>
+                <?php if (get_sub_field("instagram")): ?>
                     <li class="list-inline-item">
-                        <a href="<?php the_sub_field('instagram'); ?>" target="_blank">
+                        <a href="<?php the_sub_field(
+                            "instagram"
+                        ); ?>" target="_blank">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                     </li>
                 <?php endif; ?>
-                <?php if( get_sub_field('twitter') ): ?>
+                <?php if (get_sub_field("twitter")): ?>
                     <li class="list-inline-item">
-                        <a href="<?php the_sub_field('twitter'); ?>" target="_blank">
+                        <a href="<?php the_sub_field(
+                            "twitter"
+                        ); ?>" target="_blank">
                             <i class="fa-brands fa-x-twitter"></i>
                         </a>
                     </li>
                 <?php endif; ?>
-                <?php if( get_sub_field('tiktok') ): ?>
+                <?php if (get_sub_field("tiktok")): ?>
                     <li class="list-inline-item">
-                        <a href="<?php the_sub_field('tiktok'); ?>" target="_blank">
+                        <a href="<?php the_sub_field(
+                            "tiktok"
+                        ); ?>" target="_blank">
                             <i class="fa-brands fa-tiktok"></i>
                         </a>
                     </li>
@@ -181,26 +233,48 @@
                     </li>
                 </ul>
             </div>
-        <?php endwhile; endif; ?>
+        <?php
+            endwhile;
+        endif; ?>
             <div id="contacto" class="mb-4">
                 <ul class="list-unstyled">
-                <?php if( have_rows('telefono_1') ): while( have_rows('telefono_1') ): the_row(); ?>
+                <?php if (have_rows("telefono_1")):
+                    while (have_rows("telefono_1")):
+                        the_row(); ?>
                     <li>
-                        <i class="fas fa-phone"></i> <a href="tel:+52<?php the_sub_field('telefono_sin_formato'); ?>"><?php the_sub_field('telefono_con_formato'); ?></a>
+                        <i class="fas fa-phone"></i> <a href="tel:+52<?php the_sub_field(
+                            "telefono_sin_formato"
+                        ); ?>"><?php the_sub_field(
+    "telefono_con_formato"
+); ?></a>
                     </li>
-                <?php endwhile; endif; ?>
-                <?php if( have_rows('telefono_2') ): while( have_rows('telefono_2') ): the_row(); ?>
+                <?php
+                    endwhile;
+                endif; ?>
+                <?php if (have_rows("telefono_2")):
+                    while (have_rows("telefono_2")):
+                        the_row(); ?>
                     <li>
-                        <i class="fas fa-phone"></i> <a href="tel:+52<?php the_sub_field('telefono_sin_formato'); ?>"><?php the_sub_field('telefono_con_formato'); ?></a>
+                        <i class="fas fa-phone"></i> <a href="tel:+52<?php the_sub_field(
+                            "telefono_sin_formato"
+                        ); ?>"><?php the_sub_field(
+    "telefono_con_formato"
+); ?></a>
                     </li>
-                <?php endwhile; endif; ?>
+                <?php
+                    endwhile;
+                endif; ?>
                 </ul>
             </div>
             <div id="buscador">
-                <?php include get_theme_file_path( '/includes/searchform.php' ); ?>
+                <?php include get_theme_file_path(
+                    "/includes/searchform.php"
+                ); ?>
             </div>
         </div>
-    <?php endwhile; endif; ?>
+    <?php
+        endwhile;
+    endif; ?>
     </div>
 
     <header id="navbar" data-aos="fade-down" data-aos-delay="3000" data-aos-once="true">
@@ -208,8 +282,12 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-6 col-lg-2 my-auto ps-lg-5 ps-xl-6">
-                        <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/logo.png" alt="" class="logo img-fluid" id="logo-navbar">
+                        <a class="navbar-brand" href="<?php echo esc_url(
+                            home_url()
+                        ); ?>">
+                            <img src="<?php echo esc_url(
+                                get_template_directory_uri()
+                            ); ?>/assets/images/logo.png" alt="" class="logo img-fluid" id="logo-navbar">
                         </a>
                     </div>
                     <div class="col-6 d-block d-lg-none my-auto text-end">
@@ -228,15 +306,23 @@
                     </div>
                     <div class="col-lg-7 offset-lg-1 my-auto d-none d-lg-block">
                         <div class="contenedor-navbar">
-                        <?php if ( $currentlang == "en-US" ): ?>
+                        <?php if ($currentlang == "en-US"): ?>
                             <div class="row">
                                 <div class="col">
                                     <ul class="navbar-bottom list-inline mb-2 mb-lg-0">
                                         <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('21'); ?>"><?php echo get_the_title('21'); ?></a>
+                                            <a class="nav-link" href="<?php echo get_page_link(
+                                                "21"
+                                            ); ?>"><?php echo get_the_title(
+    "21"
+); ?></a>
                                         </li>
                                         <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('357'); ?>"><?php echo get_the_title('357'); ?></a>
+                                            <a class="nav-link" href="<?php echo get_page_link(
+                                                "357"
+                                            ); ?>"><?php echo get_the_title(
+    "357"
+); ?></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -246,10 +332,18 @@
                                 <div class="col">
                                     <ul class="navbar-bottom list-inline mb-2 mb-lg-0">
                                         <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('2'); ?>"><?php echo get_the_title('2'); ?></a>
+                                            <a class="nav-link" href="<?php echo get_page_link(
+                                                "2"
+                                            ); ?>"><?php echo get_the_title(
+    "2"
+); ?></a>
                                         </li>
                                         <li class="nav-item list-inline-item">
-                                            <a class="nav-link" href="<?php echo get_page_link('23'); ?>"><?php echo get_the_title('23'); ?></a>
+                                            <a class="nav-link" href="<?php echo get_page_link(
+                                                "23"
+                                            ); ?>"><?php echo get_the_title(
+    "23"
+); ?></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -260,61 +354,83 @@
                     <div class="col-lg-2">
                         <div class="row">
                             <div class="col-12">
-                        <?php if( have_rows('datos_de_contacto', 'option') ): while( have_rows('datos_de_contacto', 'option') ): the_row(); ?>
-                            <?php if( have_rows('redes_sociales') ): while( have_rows('redes_sociales') ): the_row(); ?>
+                        <?php if (have_rows("datos_de_contacto", "option")):
+                            while (have_rows("datos_de_contacto", "option")):
+                                the_row(); ?>
+                            <?php if (have_rows("redes_sociales")):
+                                while (have_rows("redes_sociales")):
+                                    the_row(); ?>
                                 <ul class="social list-inline d-none d-lg-block">
-                                <?php if( get_sub_field('linkedin') ): ?>
+                                <?php if (get_sub_field("linkedin")): ?>
                                     <li class="list-inline-item">
-                                        <a href="<?php the_sub_field('linkedin'); ?>" target="_blank">
+                                        <a href="<?php the_sub_field(
+                                            "linkedin"
+                                        ); ?>" target="_blank">
                                             <i class="fa-brands fa-linkedin-in"></i>
                                         </a>
                                     </li>
                                 <?php endif; ?>
-                                <?php if( get_sub_field('youtube') ): ?>
+                                <?php if (get_sub_field("youtube")): ?>
                                     <li class="list-inline-item">
-                                        <a href="<?php the_sub_field('youtube'); ?>" target="_blank">
+                                        <a href="<?php the_sub_field(
+                                            "youtube"
+                                        ); ?>" target="_blank">
                                             <i class="fa-brands fa-youtube"></i>
                                         </a>
                                     </li>
                                 <?php endif; ?>
-                                <?php if( get_sub_field('facebook') ): ?>
+                                <?php if (get_sub_field("facebook")): ?>
                                     <li class="list-inline-item">
-                                        <a href="<?php the_sub_field('facebook'); ?>" target="_blank">
+                                        <a href="<?php the_sub_field(
+                                            "facebook"
+                                        ); ?>" target="_blank">
                                             <i class="fa-brands fa-facebook-f"></i>
                                         </a>
                                     </li>
                                 <?php endif; ?>
-                                <?php if( get_sub_field('instagram') ): ?>
+                                <?php if (get_sub_field("instagram")): ?>
                                     <li class="list-inline-item">
-                                        <a href="<?php the_sub_field('instagram'); ?>" target="_blank">
+                                        <a href="<?php the_sub_field(
+                                            "instagram"
+                                        ); ?>" target="_blank">
                                             <i class="fa-brands fa-instagram"></i>
                                         </a>
                                     </li>
                                 <?php endif; ?>
-                                <?php if( get_sub_field('twitter') ): ?>
+                                <?php if (get_sub_field("twitter")): ?>
                                     <li class="list-inline-item">
-                                        <a href="<?php the_sub_field('twitter'); ?>" target="_blank">
+                                        <a href="<?php the_sub_field(
+                                            "twitter"
+                                        ); ?>" target="_blank">
                                             <i class="fa-brands fa-x-twitter"></i>
                                         </a>
                                     </li>
                                 <?php endif; ?>
-                                <?php if( get_sub_field('tiktok') ): ?>
+                                <?php if (get_sub_field("tiktok")): ?>
                                     <li class="list-inline-item">
-                                        <a href="<?php the_sub_field('tiktok'); ?>" target="_blank">
+                                        <a href="<?php the_sub_field(
+                                            "tiktok"
+                                        ); ?>" target="_blank">
                                             <i class="fa-brands fa-tiktok"></i>
                                         </a>
                                     </li>
                                 <?php endif; ?>
                                 </ul>
-                            <?php endwhile; endif; ?>
-                        <?php endwhile; endif; ?>
+                            <?php
+                                endwhile;
+                            endif; ?>
+                        <?php
+                            endwhile;
+                        endif; ?>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
                                 <ul class="social social-bottom list-inline d-none d-lg-block">
                                     <li class="list-inline-item">
-                                        <?php include get_theme_file_path( '/includes/searchform.php' ); ?>
+                                        <?php include get_theme_file_path(
+                                            "/includes/searchform.php"
+                                        ); ?>
                                         <!-- a id="buscar-escritorio" href="javascript:void(0)">
                                             <i class="fa-solid fa-magnifying-glass"></i>
                                         </a -->
